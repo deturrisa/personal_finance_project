@@ -37,7 +37,7 @@ class FileHandlerTests(unittest.TestCase):
         f = FileHandler
         mock_Path_file.exists.return_value = True
         mock_Path_file.stat().st_mtime = 1537774559.9282894
-
+        pass
 
 
 if __name__ == '__main__':
