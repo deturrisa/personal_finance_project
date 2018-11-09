@@ -45,7 +45,31 @@ SET UP
 -------
 This app requires an account with a file hosting service such as Dropbox or Google Drive and your computer must be synchronised with it.
 
+Must have python 3.7 installed
+
 1. Clone the repository into a directory on your local workspace that is located in Dropbox or GoogleDrive e.g
 ```
 C:\Users\johnsmith\Dropbox\finance_app
 ```
+
+2.
+- (Windows) Create a file wherever you like and name it **run_backup.bat**
+  Inside copy the following:
+  ```
+  cd C:\Users\johnsmith\Dropbox\finance_app
+  python -m main.main
+  ```
+- (Mac) Create a file wherever you like and name it **run_backup.sh**
+  Inside copy the following:
+  ```
+  #!/bin/bash
+
+  cd cd /Users/johnsmith/Dropbox/finance_app
+  python3 -m main.main
+  ```
+3. Run the file and and **input.txt** and **output_files** directory will be created
+
+4. From here you can edit the **input.txt** from your smartphone or personal computer to record your expenses.
+
+5. In order for the **input.txt** to be backed up daily with your computer powered on please refer to this guide
+  <https://www.thewindowsclub.com/how-to-schedule-batch-file-run-automatically-windows-7>
