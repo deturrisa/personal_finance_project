@@ -13,6 +13,8 @@ I am hoping **V.3.0** will bring the use of a cloud service such as **AWS** so i
 #### Example
 
 ```
+#input.txt
+
 Travel,50
 Lunch,100
 Coffee,30
