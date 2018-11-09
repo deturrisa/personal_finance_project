@@ -1,3 +1,11 @@
-input.csv
+input.txt
 __pycache__
 *.csv
+*.bat
+output_files
+TODO.txt
+main/DEPRECATED_output_file_handler.py
+test/DEPRECATED_test_output_file_handler.py
+main/file_sorter.py
+test/test_file_sorter.py
+

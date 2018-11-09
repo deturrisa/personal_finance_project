@@ -1,22 +1,27 @@
 import unittest
-from unittest.mock import patch
+from unittest import mock
 from main.dir_handler import DirHandler
 
 class DirHandlerTests(unittest.TestCase):
 
-    @patch('main.dir_handler.DirHandler.path')
-    def test_if_output_files_dir_not_exist_createDir_call_mkdir(self,mock_Path):
-        d = DirHandler
-        mock_Path.exists.return_value = False
-        d.createDir()
-        mock_Path.mkdir.assert_called()
+    #test when dir exist and not exist
+    @mock.patch('main.dir_handler.os.path')
+    @mock.patch('main.dir_handler.os')
+    def test_createDir(self, mock_os, mock_dir_path):
 
-    @patch('main.dir_handler.DirHandler.path')
-    def test_if_output_files_dir_exists_createDir_not_call_mkdir(self,mock_Path):
         d = DirHandler
-        mock_Path.exists.return_value = True
-        d.createDir()
-        mock_Path.mkdir.assert_not_called()
+        mock_dir_path.isdir.return_value = True
+
+        d.createDir("any output file path")
+
+        #test that mkdir was not called
+        self.assertFalse(mock_os.mkdir.called, "Failed to create directory if directory is present.")
+
+        mock_dir_path.isdir.return_value = False
+
+        d.createDir("any output file path")
+
+        mock_os.mkdir.assert_called_with("any output file path")
 
 if __name__ == '__main__':
     unittest.main()

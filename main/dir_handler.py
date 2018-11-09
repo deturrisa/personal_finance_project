@@ -1,11 +1,11 @@
-from pathlib import Path
+import os
+import os.path
 
 class DirHandler:
-	path = Path("output_files") #need to check
 
-	def createDir():
-		if not DirHandler.path.exists():
-			DirHandler.path.mkdir()
-			print("output_files Directory created!")
+	def createDir(output_dir_path):
+		if not os.path.isdir(output_dir_path):
+			os.mkdir(output_dir_path)
+			print("output_file Directory created!")
 		else:
 			print("output_files Directory already exists. Skipping directory creation")
