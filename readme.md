@@ -38,9 +38,14 @@ Dinner,80
 
 
 ```
-input.txt is wiped ready for use the next day. 
+**input.txt** is wiped ready for use the next day.
 
 
 SET UP
 -------
 This app requires an account with a file hosting service such as Dropbox or Google Drive and your computer must be synchronised with it.
+
+1. Clone the repository into a directory on your local workspace that is located in Dropbox or GoogleDrive e.g
+```
+C:\Users\johnsmith\Dropbox\finance_app
+```
