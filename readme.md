@@ -20,6 +20,26 @@ Lunch,100
 Coffee,30
 Dinner,80
 ```
+The app backs up **input.txt** and wipes it. The backup file is named **<backup_date>.csv**
+
+```
+#01-01-2018.csv
+
+Travel,50
+Lunch,100
+Coffee,30
+Dinner,80
+```
+```
+#input.txt
+
+
+
+
+
+```
+input.txt is wiped ready for use the next day. 
+
 
 SET UP
 -------
